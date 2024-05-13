@@ -1,33 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Questions from "./Questions.jsx";
+import questionData from "./questions.js";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [testStart, setTestStart] = useState(true);
 
-  return (
+
+  function startQuiz() {
+    setTestStart(false);
+  }
+  
+  return(
     <>
+        <video autoPlay muted loop id="myVideo">
+            <source src="../pictures/video-background.mp4" type="video/mp4" />
+        </video>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        {testStart ? (
+          /* Question Information Area */
+          <div>
+            <h1>Welcome to the Test!</h1>
+            <p>
+                Welcome to this fun test! Here, you can test your knowledge on various subjects by answering interesting and engaging questions. Be prepared to be challenged by each question! 
+                Every question have <b>30 second</b>. You <u>can't see</u> options in <b>first 10 seconds</b>.  
+            </p>
+            <button onClick={startQuiz} id='start'>Start Test</button>
+          </div>
+        ) : (
+        /* Questions Area */
+        <div className='question-area'>
+          
+          <Questions questions={questionData} />
+        </div> 
+        )}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
