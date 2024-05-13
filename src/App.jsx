@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Questions from "./Questions.jsx";
 import questionData from "./questions.js";
+import videobackground from "../pictures/video-background.mp4";
 
 function App() {
   const [testStart, setTestStart] = useState(true);
@@ -14,7 +15,7 @@ function App() {
   return(
     <>
         <video autoPlay muted loop id="myVideo">
-            <source src="../pictures/video-background.mp4" type="video/mp4" />
+            <source src = {videobackground} type="video/mp4" />
         </video>
       <div>
         {testStart ? (
