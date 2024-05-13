@@ -13,7 +13,7 @@ function Questions({ questions }) {
     useEffect(() => {
         const time = setTimeout(() => {
             setShowOptions(true);
-        }, 100);
+        }, 10000);
         
         return () => setShowOptions(false);
 
