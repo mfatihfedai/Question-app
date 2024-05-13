@@ -1,7 +1,7 @@
 import cinseddi from "../pictures/cin-seddi.jpg";
 import pamuk from "../pictures/pamuk.jpg";
 import tarkan from "../pictures/tarkan.jpg";
-import fobi from "../pictures/fobi.jpg";
+import mutluluk from "../pictures/mutluluk.jpg";
 import balik from "../pictures/balik.jpg";
 import bandira from "../pictures/bandira.jpg";
 import billboard from "../pictures/billboard.jpg";
@@ -42,7 +42,7 @@ const questions = [
       "Kuş tüyüyle gıdıklanma korkusu",
     ],
     answer: "Kuş tüyüyle gıdıklanma korkusu",
-    media: fobi,
+    media: mutluluk,
   },
   {
     id: 5,
