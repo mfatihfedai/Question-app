@@ -23,7 +23,7 @@ function Questions({ questions }) {
         const time = setTimeout(() => {
             setCurrentQuestion(prev => prev + 1 );
             setRemainTime(30);
-        }, 30000);
+        }, 30000)
 
         return () => clearTimeout(time);
     }, [currentQuestions, questions]); 
@@ -57,13 +57,13 @@ function Questions({ questions }) {
         } else {
             setFalseResult(falseResult + 1);
             setFalseAnswers(prev => [...prev, currentQuestion.options[optionIndex]]);
-        }
-        setCurrentQuestion(prev => prev + 1 );
+        }        setCurrentQuestion(prev => prev + 1 );
         setRemainTime(30);
+
     }
     return (
         <div>
-            {!(currentQuestions >= questions.length) ? (
+            {(currentQuestions < questions.length) ? (
                 <>
                     <h2>Question {currentQuestion.id}</h2>
                     <div>
