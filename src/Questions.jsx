@@ -46,9 +46,7 @@ function Questions({ questions }) {
     }
     }, [currentQuestions]);
 
-
     const currentQuestion = questions[currentQuestions];
-
 
     const choiceFunc = (optionIndex, correctAnswer) => {
         if(currentQuestion.options[optionIndex] === correctAnswer) {
