@@ -55,7 +55,8 @@ function Questions({ questions }) {
         } else {
             setFalseResult(falseResult + 1);
             setFalseAnswers(prev => [...prev, currentQuestion.options[optionIndex]]);
-        }        setCurrentQuestion(prev => prev + 1 );
+        }        
+        setCurrentQuestion(prev => prev + 1 );
         setRemainTime(30);
 
     }
